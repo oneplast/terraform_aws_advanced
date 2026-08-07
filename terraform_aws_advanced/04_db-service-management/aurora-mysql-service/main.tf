@@ -75,7 +75,7 @@ resource "aws_rds_cluster" "my_aurora_cluster" {
   skip_final_snapshot          = true                  # 삭제 시 최종 스냅샷 생성 여부
   backup_retention_period      = 7                     # 백업 보존 기간 (일)
   preferred_backup_window      = "07:00-09:00"         # 백업 시간 (UTC 기준)
-  apply_immediately            = true                  # 업데이트 즉시 적용
+  apply_immediately            = false                 # 업데이트 즉시 적용
   preferred_maintenance_window = "mon:05:00-mon:07:00" # 유지보수 시간 (UTC) 기준
 
   # storage_encrypted   = true # 스토리지 암호화 여부
@@ -95,7 +95,7 @@ resource "aws_rds_cluster_instance" "my_aurora_instance" {
   engine_version       = var.db_engine_version                # 엔진 버전
   db_subnet_group_name = aws_db_subnet_group.this.name        # DB 서브넷 그룹 이름
   publicly_accessible  = false                                # 퍼블릭 액세스 비활성화
-  apply_immediately    = true                                 # 업데이트 즉시 적용
+  apply_immediately    = false                                # 업데이트 즉시 적용
 
   # monitoring_interval  = 60                                   # 모니터링 간격 (초)
   # performance_insights_enabled = true # 성능 통찰력 활성화

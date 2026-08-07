@@ -20,13 +20,16 @@ public_key_path = "~/.ssh/my-key.pub"
 cluster_identifier = "my-aurora-cluster"
 
 # Aurora 엔진 버전
-db_engine_version = "8.0.mysql_aurora.3.06.1"
+db_engine_version = "8.0.mysql_aurora.3.10.1"
+# db_engine_version = "8.0.mysql_aurora.3.11.1"
+# db_engine_version = "8.0.mysql_aurora.3.12.0"
 
 db_username = "admin"
 db_password = "password1234!"
 
 # Aurora 인스턴스 클래스
 db_instance_class = "db.r5.xlarge"
+# db_instance_class = "db.r5.large"
 
 # 접근 허용 CIDR
 allowed_cidr = "10.0.0.0/16"
