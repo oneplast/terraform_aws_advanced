@@ -25,3 +25,4 @@ crash.log
 *.zip
 
 # 기타 숨김 파일
+.vscode
